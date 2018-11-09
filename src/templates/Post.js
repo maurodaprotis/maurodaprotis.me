@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
+import Seo from '../components/Seo';
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   return (
     <div>
+      <Seo postSEO post={post} postPath={post.frontmatter.path} />
       <h1>{post.frontmatter.title}</h1>
       <p>{post.excerpt}</p>
     </div>

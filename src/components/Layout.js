@@ -6,6 +6,7 @@ import { injectGlobal } from 'emotion';
 import { ThemeProvider } from 'emotion-theming';
 
 import Header from './Header';
+import Seo from './Seo';
 
 injectGlobal`
   html {
@@ -29,15 +30,7 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <Helmet
-          title={data.site.siteMetadata.title}
-          meta={[
-            { name: 'description', content: 'Sample' },
-            { name: 'keywords', content: 'sample, something' },
-          ]}
-        >
-          <html lang="en" />
-        </Helmet>
+        <Seo />
         <Header siteTitle={data.site.siteMetadata.title} />
         <div
           style={{
