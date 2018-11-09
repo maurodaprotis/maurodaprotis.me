@@ -2,8 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
+import { injectGlobal } from 'emotion';
+import { ThemeProvider } from 'emotion-theming';
 
 import Header from './Header';
+
+injectGlobal`
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+`;
 
 const Layout = ({ children }) => (
   <StaticQuery
