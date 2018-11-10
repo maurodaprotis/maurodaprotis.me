@@ -9,11 +9,11 @@ const typography = new Typography({
   scaleRatio: 3,
   headerFontFamily: [config.headerFontFamily, 'sans-serif'],
   bodyFontFamily: [config.bodyFontFamily, 'serif'],
-  headerWeight: 700,
+  headerWeight: 600,
   googleFonts: [
     {
       name: config.headerFontFamily,
-      styles: ['700', '400'],
+      styles: ['600', '600i', '400'],
     },
     {
       name: config.bodyFontFamily,

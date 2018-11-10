@@ -1,16 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import styled from 'react-emotion';
+import { Link, graphql } from 'gatsby';
+import Layout from '../components/Layout';
+import Wrapper from '../components/Wrapper';
 import Seo from '../components/Seo';
+import Content from '../components/Content';
+import Subline from '../components/Subline';
+
+const Title = styled.h1`
+  margin-bottom: 1rem;
+`;
+
+const PostContent = styled.div`
+  margin-top: 4rem;
+`;
 
 const Post = ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div>
-      <Seo postSEO post={post} postPath={post.frontmatter.path} />
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.excerpt}</p>
-    </div>
+    <Layout>
+      <Wrapper>
+        <Seo postPath={post.frontmatter.path} post={post} postSeo />
+        <Content>
+          <Title>{post.frontmatter.title}</Title>
+          <Subline>
+            {post.frontmatter.date} &mdash; {post.timeToRead} Min Read &mdash;
+            In{' '}
+            {post.frontmatter.tags.map(tag => (
+              <Link key={tag} to={`/tags/${tag}`}>
+                {tag}
+              </Link>
+            ))}
+          </Subline>
+          <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Content>
+      </Wrapper>
+    </Layout>
   );
 };
 

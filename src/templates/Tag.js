@@ -1,16 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { graphql } from 'gatsby';
+import { Link, graphql } from 'gatsby';
+import Helmet from 'react-helmet';
+import config from '../../config/SiteConfig';
+import Layout from '../components/Layout';
+import Wrapper from '../components/Wrapper';
+import Content from '../components/Content';
+import SectionTitle from '../components/SectionTitle';
+import Subline from '../components/Subline';
+import ArticleList from '../components/ArticleList';
 
 const TagTemplate = ({ data, pageContext, location }) => {
   const { tag } = pageContext;
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node);
   return (
-    <div>
-      <h2>{tag}</h2>
-      <p>{`Have ${posts.length} posts`}</p>
-      <p>{location.href}</p>
-    </div>
+    <Layout>
+      <Wrapper>
+        <Helmet title={`${tag} | ${config.siteTitle}`} />
+        <Content>
+          <SectionTitle>{tag}</SectionTitle>
+          <Subline sectionTitle>
+            {posts.length} post tagged with {tag} (See{' '}
+            <Link to="/">all tags</Link> )
+          </Subline>
+          <ArticleList posts={posts} />
+        </Content>
+      </Wrapper>
+    </Layout>
   );
 };
 
@@ -35,6 +51,7 @@ export const tagTemplateQuery = graphql`
             tags
             date(formatString: "MMMM DD, YYYY")
           }
+          timeToRead
           excerpt
         }
       }
