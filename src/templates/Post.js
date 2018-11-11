@@ -7,6 +7,7 @@ import Wrapper from '../components/Wrapper';
 import Seo from '../components/Seo';
 import Content from '../components/Content';
 import Subline from '../components/Subline';
+import Prism from '../components/styles/Prism';
 
 const Title = styled.h1`
   margin-bottom: 1rem;
@@ -33,6 +34,7 @@ const Post = ({ data }) => {
               </Link>
             ))}
           </Subline>
+
           <PostContent dangerouslySetInnerHTML={{ __html: post.html }} />
         </Content>
       </Wrapper>

@@ -21,7 +21,7 @@ const TagTemplate = ({ data, pageContext, location }) => {
           <SectionTitle>{tag}</SectionTitle>
           <Subline sectionTitle>
             {posts.length} post tagged with {tag} (See{' '}
-            <Link to="/">all tags</Link> )
+            <Link to="/tags">all tags</Link> )
           </Subline>
           <ArticleList posts={posts} />
         </Content>

@@ -35,7 +35,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/pages/blog`,
+        path: `${__dirname}/blog`,
         name: 'markdown-pages',
       },
     },
@@ -61,5 +61,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-emotion',
+    'gatsby-plugin-netlify' /* Must be last item */,
   ],
 };

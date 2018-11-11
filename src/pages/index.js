@@ -26,7 +26,6 @@ const Hero = styled.div`
 `;
 
 const IndexPage = ({ data }) => {
-  console.log(data);
   const posts = data.allMarkdownRemark.edges.map(edge => edge.node);
   return (
     <Layout>
