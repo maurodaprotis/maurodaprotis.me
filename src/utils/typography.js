@@ -5,7 +5,7 @@ const config = require('../../config/SiteConfig');
 const typography = new Typography({
   title: 'Mauro Daprotis',
   baseFontSize: config.baseFontSize,
-  baseLineHeight: 1.15,
+  baseLineHeight: 1.5,
   scaleRatio: 3,
   headerFontFamily: [config.headerFontFamily, 'sans-serif'],
   bodyFontFamily: [config.bodyFontFamily, 'serif'],
