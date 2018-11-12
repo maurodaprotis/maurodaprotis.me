@@ -11,7 +11,7 @@ module.exports = {
   author: 'Mauro Daproits', // Author for schemaORGJSONLD
   siteLogo: '/social/logo.png', // Image for schemaORGJSONLD
 
-  // siteFBAppID: '123456789', // Facebook App ID - Optional
+  // siteFBAppID: '1173390536', // Facebook App ID - Optional
   userTwitter: '@maurodaprotis', // Twitter Username - Optional
   ogSiteName: 'maurodaprotis', // Facebook Site Name - Optional
   ogLanguage: 'en_US', // Facebook Language
