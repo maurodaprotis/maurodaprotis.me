@@ -13,7 +13,7 @@ const typography = new Typography({
   googleFonts: [
     {
       name: config.headerFontFamily,
-      styles: ['600', '600i', '400'],
+      styles: ['600', '400'],
     },
     {
       name: config.bodyFontFamily,

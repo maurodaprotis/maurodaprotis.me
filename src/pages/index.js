@@ -33,7 +33,7 @@ const IndexPage = ({ data }) => {
         <Hero>
           <h1>Hi.</h1>
           <p>
-            I&apos;m Mauro Daprotis, a freelance Web Developer with three years
+            I&apos;m Mauro Daprotis, a freelance Web Developer with four years
             of industry experience, specializing in developing Javascript web
             apps.
           </p>

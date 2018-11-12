@@ -16,6 +16,8 @@ module.exports = {
   ogSiteName: 'maurodaprotis', // Facebook Site Name - Optional
   ogLanguage: 'en_US', // Facebook Language
 
+  // Google analytics
+  trackingId: 'UA-128275631-1',
   // Manifest and Progress color
   // See: https://developers.google.com/web/fundamentals/web-app-manifest/
   themeColor: '#FF0000',

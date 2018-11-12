@@ -30,6 +30,7 @@ injectGlobal`
     }
   }
   a {
+    font-weight: 600;
     color: ${theme.colors.grey.dark};
     text-decoration: none;
     transition: all ${theme.transitions.fast};

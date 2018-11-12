@@ -26,6 +26,15 @@ module.exports = {
     },
     'gatsby-plugin-offline',
     {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: config.trackingId,
+        head: false,
+        anonymize: true,
+        respectDNT: false,
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
